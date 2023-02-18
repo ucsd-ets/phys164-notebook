@@ -1,9 +1,8 @@
-FROM ucsdets/datascience-notebook:2020.2-stable
+FROM ucsdets/datahub-base-notebook:2023.1-stable
 
 USER root
 
-# Python Packages
-RUN conda install -y astropy astroquery -c conda-forge
-#RUN conda install -y astroquery -c conda-forge
+COPY pip-requirements.txt /tmp
+RUN pip install --no-cache-dir -r /tmp/pip-requirements.txt
 
 USER $NB_UID
