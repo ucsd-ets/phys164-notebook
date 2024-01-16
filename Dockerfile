@@ -1,4 +1,4 @@
-FROM ucsdets/datascience-notebook:2020.2-stable
+FROM ucsdets/datascience-notebook:2023.4-stable
 
 USER root
 
